@@ -22,7 +22,7 @@ public class Binlog2Hive {
         System.setProperty("HADOOP_USER_NAME","hdfs");
     }
     //227527999，binlogFileName文件为mysql-bin.000043
-    ///Users/mobin/Downloads/RDS-binlog/mysql-bin.000642
+    //Users/mobin/Downloads/RDS-binlog/mysql-bin.000642
     public static void main(String[] args) throws Exception {
         BinlogClient client = new BinlogClient();
         BinlogOption option = new BinlogOption(args);
