@@ -1,0 +1,1 @@
+CREATE TABLE binglogDB.t_position(nextposition LONG ,binlogfilename VARCHAR(20))
