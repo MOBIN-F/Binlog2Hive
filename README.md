@@ -1,17 +1,17 @@
-##项目背景
+## 项目背景
 >RDS的数据实时同步到HDFS下，并映射到Hive
 
-##原理
+## 原理
 >通过解析RDS的binlog将RDS的增量数据同步到HDFS下，并映射加载到Hive外部分区表
 
 由于RDS表中的第二个字段都为datetime字段，所以刚才以该字段作为Hive的分区字段
 
-###配置文件介绍
+### 配置文件介绍
 * doc/creat table.sql：Hive表的建表语句，除了静态表外，其他全部为天级别外部分区表
 * binglog2Hive_conf.properties:里面为所有全部需要同步到HDFS的表
 * mysql.properties:Mysql druid连接池配置
 
-###程序说明
+### 程序说明
 binlog解析框架：https://github.com/shyiko/mysql-binlog-connector-java
 
 核心类为BinlogClient
